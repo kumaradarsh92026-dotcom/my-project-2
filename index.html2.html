@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+ <html>
+<head>
+    <title>TYPING SPEED TEST</title><
+    <style>
+        body {
+            font-family:Arial,sans-serif;
+            text-aligin:centre;
+            margin-top:50px;
+        }
+
+
+        #text{
+            <font-size:20px;
+            margin:20px;
+            colour:blue;
+        }
+        
+        
+        textarea{
+            width:80%;
+            height:100px;
+            font-size:18px;
+        }
+        
+        
+        button}
+        padding:10px 20px;
+        margin-top:10px;
+        font-size:16px;
+    
+    }
+
+
+    #result
+           {margin-top:20px;
+           font-size:20px;
+           font-weight:bold;
+           }
+        </style>
+    </head>
+<body>
+
+    <h1>Typing Speed Test</h1>
+
+</div> 
+    The quick brown fox jumps over the lazy dog.
+</div>
+
+<textarea id="input" placeholder="Start typing here..."></textarea>
+<br>
+<button onclick="chekTyping()">FINISH</button><Button>
+
+    <div id ="result"></div>
+
+    <script>
+        let startTime;
+        TIME = 10 S
+        const inputBox = document.getElementryByid("input");
+
+        inputBox.addEventListener("focus",() => {
+            if (!startTime) {
+                startTime = new Date ().getTme();
+            });
+
+            function chekTyping()
+             const originalText =
+              document.getElementById("text").innerText;
+
+            const typedText = inputBox.value;
+
+            const endTime = new Date().getTime();
+            const timeTaken = (endTime - startTime) / 1000;
+
+            const words = typedText.trim().split(/\s+/).length;
+            const wpm = Math.round((words / timeTaken) * 60);
+
+            let correctchars = 0;
+            for (let i = 0; i < Maths.min(originalText.length,typedText.length);i++){
+                if (originalText[i] === typedText[i]) {
+                  correctchars++;
+
+                }
+            }
+
+            const accuracy Math.round(
+                (correctchars / originalText.lenght)*100
+        );
+
+        document.getElementById("result").innerHTML=
+        `speed: ${wpm} WPM <br> Accuracy: ${accuracy}%`;
+        }
+    </script>
+
+</body>
+</html>
